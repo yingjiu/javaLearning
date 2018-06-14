@@ -6,10 +6,10 @@ package com.sangmu.Thread;
 
 /**
  * @author wb-lcw229616
- * @version $Id: SyncThread.java, v 0.1 2018Äê04ÔÂ12ÈÕ 14:25 wb-lcw229616 Exp $
+ * @version $Id: SyncThread.java, v 0.1 2018ï¿½ï¿½04ï¿½ï¿½12ï¿½ï¿½ 14:25 wb-lcw229616 Exp $
  */
 /**
- * Í¬²½Ïß³Ì
+ * Í¬ï¿½ï¿½ï¿½ß³ï¿½
  */
 class SyncThread implements Runnable {
     private static int count;
@@ -21,10 +21,10 @@ class SyncThread implements Runnable {
     @Override
     public  void run() {
         synchronized(this) {
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 100; i++) {
                 try {
                     System.out.println(Thread.currentThread().getName() + ":" + (count++));
-                    Thread.sleep(100);
+                    Thread.sleep(1);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
